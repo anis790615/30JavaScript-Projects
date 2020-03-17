@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+    <title>Playing with Variables</title>
+  </head>
+  <body>
+    <div class="container">
+      <h1>Update CSS Variables with <span class="highlight">JS</span></h1>
+      <div class="controls">
+        <label for="spacing">Spacing</label>
+        <input
+          type="range"
+          name="spacing"
+          min="10"
+          max="200"
+          value="10"
+          data-sizing="px"
+        />
+        <label for="blur">Blur</label>
+        <input
+          type="range"
+          name="blur"
+          min="0"
+          max="25"
+          value="10"
+          data-sizing="px"
+        />
+        <label for="base">Base Color</label>
+        <input type="color" name="base" value="#ffc600" />
+      </div>
+      <img
+        src="https://source.unsplash.com/1600x900/?random"
+        alt="A random Picture"
+      />
+    </div>
+    <script>
+      const inputs = document.querySelectorAll(".controls input");
+      function sliderUpdate() {
+        const suffix = this.dataset.sizing || "";
+        console.log(suffix);
+        document.documentElement.style.setProperty(
+          `--${this.name}`,
+          this.value + suffix
+        );
+      }
+      inputs.forEach(input => input.addEventListener("change", sliderUpdate));
+      inputs.forEach(input =>
+        input.addEventListener("mousemove", sliderUpdate)
+      );
+    </script>
+  </body>
+</html>
