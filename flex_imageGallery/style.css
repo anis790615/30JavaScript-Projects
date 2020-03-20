@@ -1,0 +1,82 @@
+@import url("https://fonts.googleapis.com/css2?family=Amatic+SC:wght@400&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Amatic SC", cursive;
+  color: white;
+  font-size: 20px;
+  width: 100%;
+}
+.panels {
+  display: flex;
+  overflow: hidden;
+  height: 100vh;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+
+.panel {
+  flex: 1;
+  font-size: 20px;
+  height: 100%;
+  background-size: cover;
+  background-position: center;
+  transition: font-size 0.7s cubic-bezier(0.61, -0.19, 0.7, -0.11),
+    flex 0.7s cubic-bezier(0.61, -0.19, 0.7, -0.11), background 0.2s;
+  display: flex;
+  flex-flow: column nowrap;
+  justify-content: center;
+  align-items: center;
+}
+.panel > * {
+  flex: 1 0 auto;
+  display: flex;
+  align-items: center;
+  transition: transform 0.5s;
+}
+.panel p {
+  text-transform: uppercase;
+  font-size: 2em;
+  text-shadow: 0 0 4px rgba(0, 0, 0, 0.72), 0 0 14px rgba(0, 0, 0, 0.45);
+}
+.panel p:nth-child(2) {
+  font-size: 4em;
+}
+.panel.open {
+  flex: 7;
+  font-size: 40px;
+}
+
+.panel-1 {
+  background-image: url("https://images.unsplash.com/photo-1529506793229-f8fc88524182?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=800&q=60");
+}
+.panel-2 {
+  background-image: url("https://images.unsplash.com/photo-1500579886065-5a7705cbf1f7?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=800&q=80");
+}
+.panel-3 {
+  background-image: url("https://images.unsplash.com/photo-1511963211013-83bba110595d?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=800&q=80");
+}
+.panel-4 {
+  background-image: url("https://images.unsplash.com/photo-1569429637986-84be4b56f5fb?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=780&q=80");
+}
+.panel-5 {
+  background-image: url("https://images.unsplash.com/photo-1481627834876-b7833e8f5570?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=841&q=80");
+}
+.panel > *:first-child {
+  transform: translateY(-100%);
+}
+.panel.open-active > *:first-child {
+  transform: translateY(0);
+}
+.panel > *:last-child {
+  transform: translateY(100%);
+}
+.panel.open-active > *:last-child {
+  transform: translateY(0);
+}

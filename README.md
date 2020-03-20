@@ -5,4 +5,6 @@ Currently, the repo contans the following rojects:
 2- JavaScript & CSS clock.  
 3- JavaScript & CSS variables.  
 4- JavaScript - Array Excercise 1.  
+5- Flex Image Gallery.  
+  
 
