@@ -1,0 +1,70 @@
+* {
+  margin: 0;
+  padding: 0;
+  font-size: 10px;
+  box-sizing: border-box;
+}
+body {
+  font-family: "Helvetica Neue", sans-serif;
+  font-weight: 200;
+  background: rgb(7, 134, 134);
+}
+ul {
+  list-style: none;
+}
+.heading {
+  text-align: center;
+  font-size: 5rem;
+  color: #f4f4f4;
+  text-shadow: 0 0 10px #444;
+  padding: 1rem;
+}
+.search-form {
+  width: 400px;
+  margin: 5rem auto;
+  text-align: center;
+}
+input {
+  width: 100%;
+  padding: 2rem;
+}
+input.search {
+  text-align: center;
+  font-size: 4rem;
+  outline: 0;
+  border: 10px solid #f7f7f7;
+  border-radius: 5px;
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.12), inset 0 0 2px rgba(0, 0, 0, 0.19);
+  width: 120%;
+  position: relative;
+  left: -10%;
+  top: 10px;
+  z-index: 2;
+}
+.suggestions {
+  position: relative;
+}
+.suggestions li {
+  background: white;
+  border-bottom: 1px solid #d8d8d8;
+  padding: 2rem;
+  font-size: 2rem;
+  text-transform: capitalize;
+  display: flex;
+  justify-content: space-between;
+  transition: background 0.2s;
+}
+.suggestions li:nth-child(even) {
+  transform: perspective(100px) rotateX(3deg) translateY(2px) scale(1.001);
+  background: linear-gradient(to bottom, #ffffff 0%, #efefef 100%);
+}
+.suggestions li:nth-child(odd) {
+  transform: perspective(100px) rotateX(-3deg) translateY(3px);
+  background: linear-gradient(to top, #ffffff 0%, #efefef 100%);
+}
+span {
+  font-size: 1.5rem;
+}
+.highlight {
+  background: rgba(7, 134, 134, 0.5);
+}
